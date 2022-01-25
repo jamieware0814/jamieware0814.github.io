@@ -4,31 +4,34 @@
 
 **Table of Contents**
 - [Overview](#overview) 
-- [Installation](#installation)
-- [A note about jQuery](#a-note-about-jQuery)
+- [A note about jQuery in this project](#a-note-about-jQuery-in-this-project)
 - [Lesson Steps](#lesson-steps)
+    - [TODO 0.5: Run the program](#todo-0.5-run-the-program)
     - [TODO 1: Learn how to move the box](#todo-1-learn-how-to-move-the-box)
     - [TODO 2: Use Variables to remember where we've been](#todo-2-use-variables-to-remember-where-weve-been)
     - [TODO 3: Respond to Click Events](#todo-3-respond-to-click-events)
     - [TODO 4: Keeping Score](#todo-4-keeping-score)
-    - [TODO 5: Commit Your Working Code](#todo-5-commit-your-working-code)
-    - [TODO 6: Speeding Up](#todo-6-speeding-up)
-    - [TODO 7: Make the Box Bounce](#todo-7-make-the-box-bounce)
-    - [TODO 8: Fix a bug!](#todo-8-fix-a-bug)
-    - [TODO 9: Go Live](#todo-9-go-live)
+    - [TODO 5: Speeding Up](#todo-5-speeding-up)
+    - [TODO 6: Make the Box Bounce](#todo-6-make-the-box-bounce)
+    - [TODO 7: Fix a bug!](#todo-7-fix-a-bug)
+    - [TODO 8: Go Live](#todo-8-go-live)
 
 # Overview
-# (Skim over most of this, but read the section explaining how TODOs work carefully)
 We're going to create a simple game where a box moves across the screen at an increased speed after each click.
 
 <a href="https://output.jsbin.com/goyuhod/9" target="_blank"> When you are done it should look like this (Right Click --> Open in new tab) </a>
 
 ![Gameplay gif](https://github.com/OperationSpark/bouncing-box/blob/master/images/bouncing-box.gif?raw=true)
 
-Our goal for this game is to learn how to bring together HTML, CSS, and JavaScript. We use HTML to define our structure, CSS to define the style of that structure, and JavaScript in order to implement behavior. One of the primary ways we can implement behavior in JavaScript is by making modifications to the HTML and CSS in response to **events** which we will demonstrate by making this simple game. 
+Our goal for this game is to learn how to bring together HTML, CSS, and JavaScript. We used: 
+   * HTML to define our structure 
+   * CSS to define the style of that structure 
+   * JavaScript in order to implement behavior
 
-### Take Aways
+One of the primary ways we can implement behavior in JavaScript is by making modifications to the HTML and CSS in response to **events** which we will demonstrate by making this simple game. 
 
+### **Take Aways**
+This project will introduce you to a few key concepts: 
 * Introduction to principals of animation
 * Introduction to event handling with jQuery
 * Introduction to cartesian coordinates
@@ -36,18 +39,21 @@ Our goal for this game is to learn how to bring together HTML, CSS, and JavaScri
 * Using Variables to store data through the lifetime of a program
 * Using `if` statements to conditionally make changes to the game
 
-### Work Flow
+### **Work Flow**
 
 For this program you will be given _**stencil code**_ found in the `index.html` file. This stencil will set up the program for you so that you can focus on the take aways of this project.
 
-### TODOs
-# (Super Important)
-To complete the assignment, below you'll find numbered **TODO** lesson steps.  Each TODO will take you one step closer to completing the project and often times you may be required to complete multiple TODOs to complete a feature of the program. 
+   * <details>
+     <summary> How to navigate TODOS </summary>
 
-Please follow the instructions closely. Sometimes we may only show you code examples to make a point, and there is no code required to be entered. These instructions will often be labeled with **FIND**. In the steps that do require inputing some code, you will be explicitly told to do so. These steps will be labeled with **CODE:**. When entering code make sure to read the instructions closely to see _where_ you are supposed to write your code. Occasionally you will receive hints for the coding steps. These hints will be labeled with **HINTS:**. Finally **Save and Observe** sections give you explanations of what your code is doing. You should not actually do anything in these sections; just try to understand what is going on.
+      To complete the assignment, below you'll find numbered **TODO** lesson steps.  Each TODO will take you one step closer to completing the project and often times you may be required to complete multiple TODOs to complete a feature of the program. 
 
-# A note about jQuery
-# (Read if curious about how it all works)
+      Please follow the instructions closely. Sometimes we may only show you code examples to make a point, and there is no code required to be entered. These instructions will often be labeled with **FIND**. In the steps that do require inputing some code, you will be explicitly told to do so. These steps will be labeled with **CODE:**. When entering code make sure to read the instructions closely to see _where_ you are supposed to write your code. Occasionally you will receive hints for the coding steps. These hints will be labeled with **HINTS:**. Finally **Save and Observe** sections give you explanations of what your code is doing. You should not actually do anything in these sections; just try to understand what is going on.
+      </details>
+
+### **A note about jQuery in this project**
+<details>
+<summary> Read if curious about how it all works </summary>
 We are going to be using [jQuery](https://jquery.com) for this exercise. You can see that we've included it in our web page with the following HTML 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -74,81 +80,99 @@ The `board.width()` Function calculates the width of that `body` element.
 
 Since the width of the screen, the screen resolution, or the size of the window running the game could all be different, this is the only way for us to know where the edge of the screen is.
 
+</details>
 <hr>
 
 # Lesson Steps
-# (Definitely read all of this)
 
-## Run the program
-Right click on your `index.html` file and select "Preview with Live Server".
+## **TODO 0.5:** *Run the program*
 
+**FIND:**
+* Locate the `index.html` file inside of your bouncing box project folder
+* Select "Preview with Live Server".
+<hr>
 
-# TODO 1: Learn how to move the box
+## **TODO 1:** *Learn how to move the box*
 
-This TODO has 2 steps. Make sure to complete all steps before moving on!
+**IMPORTANT:**This TODO has 2 steps. Make sure to complete all steps before moving on!
 
 Moving the box requires us to change the CSS of the box. However, CSS can only be hardcoded - once it is set, it won't change unless the programmer changes it.
 
 Using the `jQuery()` Function we can instead change the CSS with JavaScript code. This will open the door to animation.
 
-## TODO 1.1: Move the `box` with CSS
+### **Part 1: Move the `box` with CSS**
 
-In this first step, we'll see how can manually move the box using CSS.
+In this first step, we'll see how we can manually move the box using CSS.
 
-**FIND:** The `<style>` tag within the `index.html` file. Here, the CSS that styles the box is defined. 
+**FIND:** 
+   * Locate the `<style>` tag within the `index.html` file. This is where the CSS that styles the box is defined. 
 
-**CODE:** Change the `left` CSS property to the following values one at a time. For each value, observe where the box ends up:
-- `200px`
-- `300px`
-- `400px`
-- `0px`
+**CODE:** 
 
-The `left` property determines how far from the _left_ side of the screen the box is. 
-- As the value increases, the box moves to the right. 
-- As the value decreases, the box moves to the left. 
-- `0px` sets the box to the left side of the screen.
+   * Change the `left` CSS property to the following values one at a time. For each value, observe where the box ends up at each value:
+        - `200px`
+        - `300px`
+        - `400px`
+        - `0px` 
 
-**CODE** Using the `left` property, choose a starting position for the `box`.
+            *  The `left` property determines how far from the _left_ side of the screen the box is. 
+                - As the value increases, the box moves to the right. 
+                - As the value decreases, the box moves to the left. 
+                - `0px` sets the box to the left side of the screen.
 
-## TODO 1.2: Move the `box` with JavaScript
+   * Give the `left` property a final value for the starting position for the `box`.
+
+### **Part 2: Move the `box` with JavaScript**
 
 CSS allows us to hard code a starting position for the box. If we want the position of the box to change continuously, we'll need to use JavaScript.
 
-**FIND:** The `<script>` tag within the `index.html` file. Then, find the `moveBoxTo` Function (around **line 47**). It looks like this:
+**FIND:** 
 
-```js
-function moveBoxTo(newPositionX) {
-    box.css("left", newPositionX);
-}
-```
+* Locate the `<script>` tag within the `index.html` file. 
+* Then, find the `moveBoxTo` Function (around **line 47**). 
+      <details> 
+      <summary>It looks like this:</summary>
 
-This Function uses `jQuery` and the `box.css()` Function to change the `left` CSS property of the box. When you call the Function, simply provide a value for `newPositionX`.
+    ```js
+       function moveBoxTo(newPositionX) {
+         box.css("left", newPositionX);
+      }
+    ``` 
+    </details>
 
-**FIND:** The `update` function's `{code block}` (around line 69).
+    * This Function uses `jQuery` and the `box.css()` Function to change the `left` CSS property of the box. When you call the Function, simply provide a value for `newPositionX`.
 
-**CODE:** In the `update` Function call the `moveBoxTo()` Function with an Argument of `100`. Your code should look like this:
+* Next, find the `update` function's `{code block}` (around line 69).
 
-```javascript
-function update() {
-    /* Your Function Call Here */
+**CODE:** 
+
+* In the `update` Function call the `moveBoxTo()` Function with an Argument of `100`. 
+    <details>
+    <summary>The update function should look like this:</summary>
+
+    ```javascript
+    function update() {
+        /* Your Function Call Here */
     
-};
-```
+    };
+    ```
+    </details>
 
-**HINT:** To call a Function, use the following syntax: `nameOfFunction(arguments)`
+    * **HINT:** To call a Function, use the following syntax: `nameOfFunction(arguments)`
 
-**CODE:** Now, replace `100` with increasingly larger values. At what value does the box go off the right edge of the screen? 
+* Now, replace `100` with increasingly larger values. 
+    * At what value does the box go off the right edge of the screen? 
 
-**CODE:** Try `moveBoxTo(boardWidth);`
+* Now try `moveBoxTo(boardWidth);`
 
 Right now we are still hard-coding this position. We want this value to change over time so that the box moves on its own.
 
-## Important!
-There should only be one call to `moveBoxTo` inside your `update()` function **at any time during this project**. Always think about if a step is asking you to put in a new line of code before you do. Extra code can be just as bad as missing code.
+#### **Important:** There should only be one call to `moveBoxTo` inside your `update()` function **at any time during this project**. Always think about if a step is asking you to put in a new line of code before you do. **Extra code can be just as bad as missing code.**
+<hr>
 
-# TODO 2: Use Variables to remember where we've been
+## **TODO 2:** *Use Variables to remember where we've been*
 
-This TODO has 3 steps. Make sure to complete all steps before moving on.
+**IMPORTANT:** This TODO has 3 steps. Make sure to complete all steps before moving on.
 
 We can manually move the box by calling the Function `moveBoxTo(10)` and then `moveBoxTo(20)` and then `moveBoxTo(30)` and so on but this is not animation.
 
@@ -164,60 +188,91 @@ Variables allow the computer to remember pieces of information as our program ru
 - increment the value on each Frame: `positionX = positionX + 10`
 - and then call the Function `moveBoxTo(positionX)`.
 
-## TODO 2.1: Declare your Variable
+## **TODO 2 Part 1:** *Declare your Variable*
 
-**FIND:** `// TODO 2 - Variable Declarations`
+**FIND:** 
+   * The comment in your file that says `// TODO 2 - Variable Declarations`
+     ><details>
+     ><summary> Something like this </summary>
+     >
+     >  ```javascript
+     >     // TODO 2 - Variable declarations 
+     >
+     >     /* Your Variable Declaration HERE */
+     >   ```
+     ></details>
 
-**CODE:** Declare a new Variable called `positionX` and assign the value `0` to it.
+**CODE:** 
+   * Declare a new Variable called `positionX` and assign the value `0` to it.
 
-```javascript
-// TODO 2 - Variable declarations 
 
-/* Your Variable Declaration HERE */
-```
 
-**HINT:** To declare a Variable, use this syntax:
+     * <details>
+       <summary> HINT: To declare a Variable, use this syntax:</summary>
 
-```js
-var myVariable = someValue;
-```
+         ```js
+            var myVariable = someValue;
+         ```
+       </details>
 
-## TODO 2.2: Replace the hard-coded value
+## **TODO 2 Part 2:** *Replace the hard-coded value*
 
-**FIND:** The `update()` Function
+**FIND:** 
 
-**CODE:** Replace the hard-coded value in `moveBoxTo()` with your new Variable. Your code should look like this:
+* Locate the `update()` Function
 
-```javascript
-function update() {
-    moveBoxTo(positionX);
+**CODE:** 
 
-};
-```
+* Replace the hard-coded value in `moveBoxTo()` with your new Variable. 
 
-## TODO 2.3: Increase `positionX` on each Frame
+   * <details> 
+     <summary> Click to verify your code looks like this:</summary>
+
+     ```javascript
+     function update() {
+      moveBoxTo(positionX);
+
+     };
+     ```
+</details>
+<hr>
+
+## **TODO 2 Part 3:** *Increase `positionX` on each Frame*
 
 The `update` Function is being called 20 times/second. Each time it is called, `moveBoxTo(positionX)` is being called.
 
 Because `positionX` is not changing, the box is being re-drawn in the same position. To get the box to move, we need to change the value of `positionX` on each "Frame". 
 
-**CODE:** In the `update` Function, increase the value of `positionX` by `10` on each Frame:
+**FIND:** 
 
-```javascript
-function update() {
-    /* Your Code to Increase positionX by 10 HERE*/
-    moveBoxTo(positionX);
+* Locate the `update` Function
+
+
+**CODE:** 
+* At the top of the `update` Function code block, add a comment that says we want to increase the value of `positionX` by `10`
+
+    ```javascript
+     function update() {
+        /* Your Code to Increase positionX by 10 HERE*/
+        moveBoxTo(positionX);
     
-};
-```
+     };
+    ```
 
-**HINT:** To increase a Variable by `10` we can write:
+* Below the comment you just added, increase the value of `positionX` by `10` on each Frame:
 
-```javascript
-myVariable = myVariable + 10;
-```
 
-## Save and Observe
+
+   >*  <details> 
+   >    <summary> HINT: To increase a Variable by `10` we can write:</summary>
+   >
+   >    ```javascript
+   >    myVariable = myVariable + 10;
+   >    ```
+></details>
+
+
+### **Save and Observe**
 Let's take a second to understand how this will work. Remember, `update()` is called 20 times/second. Each time the `update` Function is called a new "Frame" is drawn. So, over time, our code will look like this:
 
 ```javascript
@@ -243,25 +298,37 @@ moveBoxTo(positionX);
 
 // so on...
 ```
+<hr>
 
-# TODO 3: Respond to Click Events 
-
-**FIND:** The `handleBoxClick` Function.
+## **TODO 3:** *Respond to Click Events* 
 
 While the `update` Function is called non-stop 20 times/second, the `handleBoxClick` Function is programmed to be called each time the box is clicked. 
 
-One of our goals is to reset the box to the starting position when the box is clicked. 
+One of our goals is to reset the box to the starting position when the box is clicked.
 
-**Code:** Modify the `handleBoxClick` Function to re-assign the value of `positionX` to `0`. Your Function should look like this:
+**FIND:** 
 
-```javascript
-function handleBoxClick() {
-    positionX = 0;
-    
-}
-```
+* Locate the `handleBoxClick` Function.
 
-## Save, Observe
+ 
+
+**Code:** 
+
+* Modify the `handleBoxClick` Function to re-assign the value of `positionX` to `0`.   
+   ><details>
+   ><summary>
+   >   Your Function should look like this:
+   ></summary>
+   >
+   > ```javascript
+   > function handleBoxClick() {
+   >   positionX = 0;
+   > 
+   > }
+   > ```
+   ></details>
+
+### **Save, Observe**
 
 Now, you can click on the box and it will return back to the starting position. Let's take a second to understand how this will work. The `update` Function will be constantly moving our box to a new position. However, if in between frames you click on the box, the position will be reset. 
 
@@ -294,10 +361,11 @@ moveBoxTo(positionX);
 
 // so on...
 ```
+<hr>
 
-# TODO 4: Keeping Score
+## **TODO 4:** *Keeping Score*
 
-This TODO has 4 steps. Make sure to complete all steps before moving on.
+**IMPORTANT:** This TODO has 4 steps. Make sure to complete all steps before moving on.
 
 Each time the box is clicked, we also want to keep score and display that score on the box. 
 
@@ -309,131 +377,154 @@ In order for the box to show the correct number of points, we'll need to:
 - Call the Function using the Variable
 - Increase the value of the Variable each time the box is clicked.
 
-## TODO 4.1: Call the `changeBoxText()` Function
+## **TODO 4 Part 1:** *Call the `changeBoxText()` Function*
 
-**FIND:** Go to the `handleBoxClick` Function.
+**FIND:** 
 
-**CODE:** Add a call to the `changeBoxText()` Function so that your `handleBoxClick` Function looks like this:
+* Locate the `handleBoxClick` Function.
 
-```javascript
-function handleBoxClick() {
-    positionX = 0;
-    changeBoxText(1);
-    
-}
-```
+**CODE:** 
 
-Now try clicking on the box. In addition to resetting the position of the box, it should also change the text on the box to display `1`. 
+* Add a call to the `changeBoxText()` Function. 
+ 
+   ><details>
+   ><summary> Make sure your `handleBoxClick` Function looks like this: </summary>
+   >
+   >```javascript
+   >function handleBoxClick() {
+   >    positionX = 0;
+   >    changeBoxText(1);
+   >    
+   >
+   >```
+   </details>
+
+**TEST:** 
+* Now try clicking on the box. In addition to resetting the position of the box, it should also change the text on the box to display `1`. 
 
 Again, however, this value is hard-coded. No matter how many times we click on the box, it will only ever change the text to `1`. So we need another Variable!
 
-## TODO 4.2: Create a Variable
 
-**FIND**: Your Variable declaration for `positionX` below `// TODO 2`. 
 
-**CODE:** Declare a new Variable called `points` and assign it to the value `0`. 
+## **TODO 4 Part 2:** *Create a Variable*
 
-## TODO 4.3: Replace the hard-coded value
+**FIND**: 
+* Locate your variable declaration for `positionX` below `// TODO 2`. 
 
-**FIND:** The `handleBoxClick` Function. It will look like this:
+**CODE:** 
 
-```javascript
-function handleBoxClick() {
-    positionX = 0;
-    changeBoxText(1);
-    
-}
-```
+* Declare a new variable called `points` and assign it to the value `0`. 
 
-**CODE** Modify the `changeBoxText()` Function Call so that it uses your new `points` Variable as an argument instead of the hard-coded value `1`.
+## **TODO 4 Part 3:** *Replace the hard-coded value*
 
-## TODO 4.4: Increase the value of `points` when the box is clicked
+**FIND:** 
+
+* Locate the `handleBoxClick` Function. 
+   ><details>
+   ><summary> It will look like this:</summary>
+   >
+   >```javascript
+   >function handleBoxClick() {
+   >    positionX = 0;
+   >    changeBoxText(1);
+   >    
+   >
+   >```
+   ></details>
+
+**CODE** 
+
+* Modify the `changeBoxText()` Function Call so that it uses your new `points` Variable as an argument instead of the hard-coded value `1`.
+
+## **TODO 4 Part 4:** *Increase the value of `points` when the box is clicked*
 
 Our `points` Variable is still hard-coded to the value `0`. If we want it to increase each time the box is clicked, we need to tell the computer!
 
-**FIND:** Find the `handleBoxClick` Function. 
+**FIND:** 
+* Locate the `handleBoxClick` Function. 
 
-**CODE:** Add a new line of code to this Function that increases the value of `points` by `1` each time the box is clicked. Make sure you add it _before_ you call `changeBoxText(points)`!
+**CODE:** 
+* Add a new line of code to this Function that increases the value of `points` by `1` each time the box is clicked. Make sure you add it _before_ you call `changeBoxText(points)`!
 
-```javascript
-function handleBoxClick() {
-    positionX = 0;
+   ```javascript
+   function handleBoxClick() {
+       positionX = 0;
 
-    // your code to increase the points variable by 1
+       // your code to increase the points variable by 1
 
-    changeBoxText(points);
-}
-```
+       changeBoxText(points);
+   }
+   ```
 
-**Hint #1**: To increase `positionX` by `10` we wrote: `positionX = positionX + 10;`. How can you increase `points` by `1`?
+**Hint**: To increase `positionX` by `10` we wrote: `positionX = positionX + 10;`. How can you increase `points` by `1`?
+<hr>
 
-# TODO 5: Commit Your Working Code
+## **TODO 5:** *Speeding Up*
 
-You now have working code that makes a box move across the screen. It also responds to clicks by moving back to the left side of the screen and updating its text. Because you've completed quite a few steps of the project, confirm that your code is working and save it before making a commit and pushing your work. Committing and pushing your code will take a snapshot of your work and save it to an external site - Github. This also serves as a good place to come back to if you create any errors you aren't able to debug.
-
-In your bash terminal, enter the following commands, pressing ENTER after each one:
-
-`git add .`
-
-`git commit -m 'added code for movement and event handler'`
-
-`git push`
-
-# TODO 6: Speeding Up
-
-This TODO has 3 steps that you will need to complete on your own. 
+**IMPORTANT:** This TODO has 3 steps that you will need to complete on your own. 
 
 Now that we can keep track of how many times we've clicked on the box, we also want to make the game harder after each click! 
 
-**FIND:** The `update` Function. It should look like this:
+**FIND:** 
 
-```javascript
-function update() {
-    positionX = positionX + 10;
-    moveBoxTo(positionX);
-};
-```
+* Locate the `update` Function. 
+   ><details>
+   ><summary> It should look like this: </summary>
+   >
+   >```javascript
+   >function update() {
+   >    positionX = positionX + 10;
+   >    moveBoxTo(positionX);
+   >};
+   >```
+   ></details>
 
-Currently, our program is hard-coded to increase `positionX` by `10` on every Frame. This means that the *speed* of our box is fixed to `10` pixels/frame. 
+>Currently, our program is hard-coded to increase `positionX` by `10` on every Frame. This means that the *speed* of our box is fixed to `10` pixels/frame. 
+>
+>In order to allow this speed to change over the course of our program, we will need to remember how fast our box is moving. This means we'll create a new **Variable**.
+>
+>So far, we've introduced 2 Variables to our program: `positionX` and `points`. Each variable changes over time and/or when the box is clicked. Use your knowledge of Variables to introduce a new Variable `speed` into the program with the next step!
 
-In order to allow this speed to change over the course of our program, we will need to remember how fast our box is moving. This means we'll create a new **Variable**.
+## **TODO 5 Part 1:** *Declare your Variable*
 
-So far, we've introduced 2 Variables to our program: `positionX` and `points`. Each variable changes over time and/or when the box is clicked. Use your knowledge of Variables to introduce a new Variable `speed` into the program!
+**CODE:** 
+* Declare a new Variable called `speed` and assign it the value `10`.
 
-## TODO 6.1: Declare your Variable
+    * **HINT** This variable should be declared with your other Variables `positionX` and `points`.
 
-**CODE:** Declare a new Variable called `speed` and assign it to the value `10`.
+## **TODO 5 Part 2:** *Replace the hard-coded value*
 
-**HINT** This variable should be declared with your other Variables `positionX` and `points`.
+**FIND:** 
+* Locate the `update` Function.
 
-## TODO 6.2: Replace the hard-coded value
-
-**FIND:** The `update` Function.
-
-**CODE** Modify this code so that it uses your new `speed` Variable to change `positionX` instead of the hard-coded value `10`.
-
-
-## TODO 6.3: Increase the value of `speed` when the box is clicked
-
-
-**FIND:** Find the `handleBoxClick` Function.
-
-**CODE:** Add a new line of code to this Function that increases the value of `speed` by `3` each time the box is clicked. 
+**CODE** 
+* Modify this code so that it uses your new `speed` Variable to change `positionX` instead of the hard-coded value `10`.
 
 
-# Check in with your instructor
+## **TODO 5 Part 3:** *Increase the value of `speed` when the box is clicked*
 
-Before moving on to the last TODO, check in with your instructor and make sure that your code works properly. **If you are working from home, then it is up to you to verify that everything is working as intended.**
+**FIND:** 
+
+* Locate the `handleBoxClick` Function.
+
+**CODE:** 
+
+* Add a new line of code to this Function that increases the value of `speed` by `3` each time the box is clicked. 
+
+
+### **Check in with your code**
+
+Before moving on to the last TODO, test your program and make sure that your code works properly.
 
 Your program should satisfy the following requirements:
-- The program should have no syntax errors. You can find syntax errors by opening the program in a new tab and opening the console (Right Click --> Inspect --> Console)
+- The program should have no syntax errors. You can find syntax errors by looking at the console. 
 - The box should move across the screen from left to right
 - The box should display the correct number of times that you have clicked on it
 - The box should speed up when it is clicked
 
-# TODO 7: Make the Box Bounce
+# TODO 6: Make the Box Bounce
 
-This TODO has 2 steps. Make sure to complete all steps before moving on.
+**IMPORTANT:** This TODO has 2 steps. Make sure to complete all steps before moving on.
 
 Detecting when one Object collides with another is one of the most common problems to solve when writing a video game. It is often more difficult than deciding what to do once that collision has been detected.
 
@@ -447,100 +538,109 @@ The collision occurs on Frame 3 when `positionX` (`250`) is *greater than* the c
 
 Even though the collision doesn't occur until Frame 3, the program has to check for collisions on each Frame and be ready to respond **IF** that collision occurs.
 
-## TODO 7.1: Detecting Collisions on the right wall
+## TODO 6 Part1: Detecting Collisions on the right wall
 
-**FIND:** Find the `update` Function since we need to check for collisions on every Frame. 
+**FIND:** 
 
-**CODE:** Add a Conditional Statement to the Function. It should translate to:
+* Locate the `update` Function since we need to check for collisions on every Frame. 
 
-    IF positionX is greater than boardWidth:
-        Change Direction of the Box
+**CODE:** 
 
-**HINT:** To create a Conditional statement, use this syntax:
+* Add a Conditional Statement to the Function. It should translate to:
 
-```javascript
-if (conditionIsTrue) {
-    // then do X, Y, and Z
-}
-```
+    **IF positionX is greater than boardWidth:
+        Change Direction of the Box**
 
-If you are having trouble figuring out how to change direction of the box, See the Hint below:
+    * **HINT:** To create a Conditional statement, use this syntax:
 
-<details> <summary> HINT: Changing Direction </summary>
+        ```javascript
+        if (conditionIsTrue) {
+             // then do X, Y, and Z
+        }
+        ```
 
-If you need help understanding how we can change the direction of the box, take a look at the illustration below:
+        * If you are having trouble figuring out how to change direction of the box, See the Hint below:
 
-<img src="images/changeOfSpeed.png">
+          ><details> 
+          ><summary> HINT: Changing Direction </summary>
+          >
+          >If you need help understanding how we can change the direction of the box, take a look at the illustration below:
+          >
+          ><img src="images/changeOfSpeed.png">
+          >
+          >In **Frame 3.5**, _after_ the collision has been detected but before the next Frame, notice that the `speed` Variable changes from positive `100` to negative `-100`. This change allows the box to change direction.
+          >
+          >- On each `update` Frame, `positionX` is re-calculated as `positionX + speed`. So, if a positive `speed` moves the box to the right, a negative `speed` would move the box to the left.
+          >
+          >In Frame 4, 5, and 6 we can see the box moving to the _left_ with this new negative `speed` until it collides with the left wall.
+          >
+          ></details>
 
-In **Frame 3.5**, _after_ the collision has been detected but before the next Frame, notice that the `speed` Variable changes from positive `100` to negative `-100`. This change allows the box to change direction.
+**CODE:** 
 
-- On each `update` Frame, `positionX` is re-calculated as `positionX + speed`. So, if a positive `speed` moves the box to the right, a negative `speed` would move the box to the left.
-
-In Frame 4, 5, and 6 we can see the box moving to the _left_ with this new negative `speed` until it collides with the left wall.
-
-</details>
-
-**CODE:** In the `{ code block }` of your conditional statement, modify your code to change `speed` to be negative. You can do this in any one of the following ways:
-- `speed = -speed;`
-- `speed *= -1;`
-- `speed = speed * -1;`
+* In the `{ code block }` of your conditional statement, modify your code to change `speed` to be negative. You can do this in any one of the following ways:
+    - `speed = -speed;`
+    - `speed *= -1;`
+    - `speed = speed * -1;`
 
 
-## TODO 7.2: Bounce the box off the left wall.
+## **TODO 7 Part 2:** *Bounce the box off the left wall.*
 
 Now, using what you've learned about how to bounce the box off the right wall, it's time to bounce the box off the left wall.
 
-**CODE:** Below the `if` statement you just wrote, add another that translates to:
+**CODE:** 
 
-    IF positionX is less than the MINIMUM X-Coordinate of the screen:
-        change speed to be positive
+* Below the `if` statement you just wrote, add another that translates to:
 
-**HINT:** `0` is the **MINIMUM** x-coordinate of the screen. Anything less than `0` will be off the screen to the left.
+    **IF positionX is less than the MINIMUM X-Coordinate of the screen:
+        change speed to be positive**
 
-If you can't get it to work properly, take a look at the below hints.
+    * **HINT:** `0` is the **MINIMUM** x-coordinate of the screen. Anything less than `0` will be off the screen to the left.
 
-## Hints
-<details> <summary> Hints for common issues </summary>
+      * If you can't get it to work properly, take a look at the below hints.
 
-## Issue 1: the box wiggles (right or left side).
 
-If you see your box doing this...
-<br>
-<img src="images/wiggle_bug.gif">
-
-Then that means that one or both of your boundary comparisons are incorrect. There are two possible places where this could go wrong.
-
-### Potential Problem 1: incorrect values in the comparison
-
-For both the left and right bounces, you must check the positionX against a single boundary. 
-
-For the right side, check the beginning of TODO 6 (before TODO 6.1) to see what variable stores the right boundary's x position.
-
-For the left side, check the first **HINT** in TODO 6.2 to see what the left boundary's x position is.
-
-### Potential Problem 2: incorrect operator.
-
-The other thing that can cause a wiggle is that the comparison operator ( '<' or '>' ) has been reversed. Try switching from one to the other and see if that fixes the problem.
-
-## Issue 2, the box flies away
-
-There are two possible reasons your box might keep going forever instead of bouncing. 
-
-The first is that the comparisons between positionX and the boundaries are incorrect. If you aren't sure they are correct, then check Issue 1's advice.
-
-The second possible cause is that you have not properly reversed the speed. Odds are you have it bouncing off of the right side but not the left. If that is the case then consider the following math:
-
-`5 * -1 = -5`
-
-So, you can reverse `5` by multiplying it by `-1`. How about reversing `-5`?
-
-`-5 * 1 = -5`
-
-Looks like multiplying `-5` with `1` still gives `-5`, which makes sense when you think about it. Figure out what you should put instead of a `1` to turn a negative number into a positive one, and that should solve your problem.
-
-</details>
+        ><details> <summary> Hints for common issues </summary>
+        >
+        >## Issue 1: the box wiggles (right or left side).
+        >
+        >If you see your box doing this...
+        ><br>
+        ><img src="images/wiggle_bug.gif">
+        >
+        >Then that means that one or both of your boundary comparisons are incorrect. There are two possible places where this could go wrong.
+        >
+        >### Potential Problem 1: incorrect values in the comparison
+        >
+        >For both the left and right bounces, you must check the positionX against a single boundary. 
+        >
+        >For the right side, check the beginning of TODO 6 (before TODO 6.1) to see what variable stores the right boundary's x position.
+        >
+        >For the left side, check the first **HINT** in TODO 6.2 to see what the left boundary's x position is.
+        >
+        >### Potential Problem 2: incorrect operator.
+        >
+        >The other thing that can cause a wiggle is that the comparison operator ( '<' or '>' ) has been reversed. Try switching from one to the other and see if that fixes the problem.
+        >
+        >## Issue 2, the box flies away
+        >
+        >There are two possible reasons your box might keep going forever instead of bouncing. 
+        >
+        >The first is that the comparisons between positionX and the boundaries are incorrect. If you aren't sure they are correct, then check Issue 1's advice.
+        >
+        >The second possible cause is that you have not properly reversed the speed. Odds are you have it bouncing off of the right side but not the left. If that is the case then consider the following math:
+        >
+        >`5 * -1 = -5`
+        >
+        >So, you can reverse `5` by multiplying it by `-1`. How about reversing `-5`?
+        >
+        >`-5 * 1 = -5`
+        >
+        >Looks like multiplying `-5` with `1` still gives `-5`, which makes sense when you think about it. Figure out what you should put instead of a `1` to turn a negative number into a positive one, and that should solve your problem.
+        >
+        ></details>
  
-# TODO 8: Fix a bug!
+# TODO 7: Fix a bug!
 # (It's a lot of reading, but be sure to at least skim it to make sure you understand the issue)
 Great work! It seems like our Bouncing Box game is complete. However, we've created a _bug_ in our program that we need to squash! Thankfully, this bug doesn't break the program completely, it just makes it behave in a way that we'd like to change. 
 
@@ -578,63 +678,69 @@ ELSE IF speed is a negative number:
     subtract 3 from speed
 ```
  
-Okay, time for your instructions.
+**Okay, time for your instructions.**
 
-**FIND:** The `handleBoxClick` function where you increase the speed.
+**FIND:** 
 
-**CODE:** Turn the above pseudocode into actual code and place it at the end of your `handleBoxClick` function. **Be sure to remove your old line of code that increased speed once you've put in the new code.**
+* The `handleBoxClick` function where you increase the speed.
+
+**CODE:** 
+
+* Turn the above pseudocode into actual code and place it at the end of your `handleBoxClick` function. **Be sure to remove your old line of code that increased speed once you've put in the new code.**
 
 <hr>
 
-# Extra Challenges
+## **Extra Challenges**
 
-You've written your first game! Here are some ways you can try and make your game even more awesome.
+You've written your first game! Here are some ways you can try and make your game even more awesome. These are optional, however, every challenge you rise to take only makes you a better coder!
 
-### Challenge 1) Use the [background-image](http://www.w3schools.com/cssref/pr_background-image.asp) CSS property to change your box or the background
+### Challenge 1) Change your box/background
+* Use the [background-image](http://www.w3schools.com/cssref/pr_background-image.asp) CSS property to change your box or the background
 
 ### Challenge 2) Can you move the box up and down?
-Hints: 
-1) Completing this challenge will require us to create new Variables to track the *vertical* `positionY` and `speedY` of the box. Create these new Variables:
+* Hints: 
+   * Completing this challenge will require us to create new Variables to track the *vertical* `positionY` and `speedY` of the box. Create these new Variables:
 
-```javascript
-var positionY;
-var speedY;
-```
+      ```javascript
+      var positionY;
+      var speedY;
+      ```
     
-2) We will need to dynamically change the vertical position of the box. To do so we can modify the `moveBoxTo` function to adjust the `top` CSS property of the box and set it to the value of a `newPositionY`:
+    *   We will need to dynamically change the vertical position of the box. To do so we can modify the `moveBoxTo` function to adjust the `top` CSS property of the box and set it to the value of a `newPositionY`:
 
-```javascript
-function moveBoxTo(newPositionX, newPositionY) {
-    box.css('left', newPositionX);
-    box.css('top', newPositionY);
-}
-```        
+    ```javascript
+      function moveBoxTo(newPositionX, newPositionY) {
+          box.css('left', newPositionX);
+          box.css('top', newPositionY);
+      }
+    ```        
 
-3) Then, when we call `moveBoxTo()` inside the `update` function, we add `positionY` as a second argument:
+    * Then, when we call `moveBoxTo()` inside the `update` function, we add `positionY` as a second argument:
 
-```js
-moveBoxTo(positionX, positionY);
-```
+       ```js
+       moveBoxTo(positionX, positionY);
+       ```
     
-4) To know when the box hits the bottom of the screen we will need a Variable to calculate the height of the window, at the top where you declare your Variables add:
+    * To know when the box hits the bottom of the screen we will need a Variable to calculate the height of the window, at the top where you declare your Variables add:
 
-```javascript
-var boardHeight = jQuery(window).height(); 
-```
+      ```javascript
+      var boardHeight = jQuery(window).height(); 
+      ```
 
-5) You'll need to make a few more changes to get the vertical behavior to mimic the horizontal behavior. Can you figure it out on your own?
+    * You'll need to make a few more changes to get the vertical behavior to mimic the horizontal behavior. Can you figure it out on your own?
     
 ### Challenge 3) Can you make the box start at a random location on every click?
 
-To create a random numerical value you can use the method `Math.random()` which returns a random digit between 0 and 0.99999. To get a random number between 0 and 100 we can write:
+* To create a random numerical value you can use the method `Math.random()` which returns a random digit between 0 and 0.99999. To get a random number between 0 and 100 we can write:
 
-```javascript
-var randNum = Math.random() * 100;
-```
+   ```javascript
+   var randNum = Math.random() * 100;
+   ```
     
-If the boundaries of our game along the x axis are at `0` and `boardWidth`, how can you use this pattern to only generate a random position between those two numbers? 
+* If the boundaries of our game along the x axis are at `0` and `boardWidth`, how can you use this pattern to only generate a random position between those two numbers? 
 
-Once you generate this random number, where would you use it so that after a box click the position is set to that random value?
+* Once you generate this random number, where would you use it so that after a box click the position is set to that random value?
+<br>
 
 ### Challenge 4) Can you make the box change color with each click? How about every 3 clicks?
 
@@ -647,47 +753,53 @@ box.css('background-color', colorStr);
 
 RGB colors are a combination of 3 numbers that each range from 0 to 255. The first value represents the amount of red in the color, the second represents green, and the third represents blue. The combination above is very high in blue and low in red and green. 
 
-Create a Function called `getRandomColor()` that generates a random `colorStr` and returns it. You'll need to use String concatenation to combine the random values you generate into the proper format.
+* Create a Function called `getRandomColor()` that generates a random `colorStr` and returns it. You'll need to use String concatenation to combine the random values you generate into the proper format.
 
-To generate a random number between 0 and 10, you can use the `Math.random()` Function like so:
+    * To generate a random number between 0 and 10, you can use the `Math.random()` Function like so:
 
-```js
-var randomNumberBetween0and10 = Math.random() * 10;
-```
+      ```js
+      var randomNumberBetween0and10 = Math.random() * 10;
+      ```
 
-How would you modify this so that you generate a random number between 0 and 255?
+* How would you modify this so that you generate a random number between 0 and 255?
 
-Once you have your Function working, call it and pass the `colorStr` that is returned to `box.css` to change the `background-color` property each time the box is clicked. 
+* Once you have your Function working, call it and pass the `colorStr` that is returned to `box.css` to change the `background-color` property each time the box is clicked. 
+
+<br>
 
 ### Challenge 5) Can you make the amount that the box speeds up with each click increase with every 3 clicks?
 
+<br>
+
 ### Challenge 6) Can you make the game end if you mis-click 10 times?
 
-To end the game we need to turn off the interval timer that is constantly calling our `update` function. At the bottom of your project find this line:
+To end the game we need to turn off the interval timer that is constantly calling our `update` function. 
 
-```javascript
-setInterval(update, 50);
-```
+* At the bottom of your project find this line:
+
+    ```javascript
+    setInterval(update, 50);
+    ```
     
-And modify it so that you now have this:
+* And modify it so that you now have this:
 
-```javascript
-var interval = setInterval(update, 50);
-```
+    ```javascript
+    var interval = setInterval(update, 50);
+    ```
     
-The next step is to create a function that we can call to end the game. Add this function to your project:
+* The next step is to create a function that we can call to end the game. Add this function to your project:
 
-```javascript
-function endGame() {
-    clearInterval(interval);
-}
-```
+    ```javascript
+    function endGame() {
+        clearInterval(interval);
+    }
+    ```
 
 Now that we have this function set up, we need to figure out *when* to call it. 
 - If we want to end the game after 10 misclicks, how can we track how many times we've misclicked? Will we need a new Variable for this? If so, what should it's initial value be when the game starts?
 - How can we register that a misclick has occured? If we don't click on the box, what are we clicking on? Is there a way for us to use the code that handles the box click and modify it so that it handles clicking on the board?
 
-### TODO 9: Go Live
+### **TODO 8:** *Go Live*
 
 In your bash terminal, enter the following commands, pressing ENTER after each one:
 

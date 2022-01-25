@@ -13,7 +13,7 @@
      * 
      * createCannon() takes these arguments:
      *      
-     *      createPlatform(type, position, delay);
+     *      createCannon(type, position, delay);
      * 
      *      type: "top", "bottom", "left", or "right"
      *      position: The position of the cannon along whichever side the cannon is placed on
@@ -27,9 +27,9 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
+        createCannon("top", 450);
         
-        createCannon("top", 250, 5000);
-
+        
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
